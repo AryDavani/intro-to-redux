@@ -10,7 +10,7 @@ class BookList extends Component {
   render(){
     let books = this.props.books.map((book, index) => {
       return (
-        <li key={ index }>{ book.title }</li>
+        <li onClick={ () => this.props.selectBook(book) } key={ index }>{ book.title }</li>
       )
     })
 
